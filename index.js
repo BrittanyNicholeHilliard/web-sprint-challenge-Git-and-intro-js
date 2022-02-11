@@ -288,9 +288,11 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function addArtist(arr, id, name, years, genre, nationality, bio) {
+  arr.push({name, years, genre, nationality, bio});
+  return arr;
 }
+
 
 
 
@@ -301,10 +303,17 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
-}
+artists[8]['name'] = 'Vincent van Dough';
 
+function lotsOfArt(arr) {
+  const newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (artists[i]['paintings'] > 100) {
+      newArray.push(artists[i]['name']);
+    }
+  }
+  return newArray;
+}
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 8: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use artistInfo to do the following: 
